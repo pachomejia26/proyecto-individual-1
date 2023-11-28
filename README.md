@@ -31,10 +31,6 @@ Para tener algo funcional, decidí de las listas que componen 'genres', quedarme
 documentación: Action, Adventure, Racing, Simulation, Strategy.  De esta forma cada videojuego tiene asignado un solo género.  Lo que sigue es de  df_user_items  tomar las columnas 'item_id' y 'playtime_forever', armar el DataFrame horas_jugadas y agrupando por el id conseguir el DataFrame horas_jugadas_por_juego.  Por último, se hace merge() con df_steam_games (que es donde están los géneros) y se aplica la función
 año_con_mas_horas_por_genero.
 
-Preliminares3
-
-Acá leemos los archivos df_steam_games y df_user_items para resolver la segunda pregunta
-
 EDA
 
 CS_MODEL

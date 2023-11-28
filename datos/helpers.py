@@ -27,20 +27,6 @@ def getRecomendaciones(id_producto):
         l.append(lista[0])
     return l 
 
-def getUserForGenre(genero):
-    df1 = pd.read_parquet('datos/csv/df_user_items4.parquet')
-    df2 = pd.read_csv('datos/csv/df_steam_games_25k.csv')
-    # unimos los dataframe:
-    merged_df1 = pd.merge(df1, df2, on='id')
 
-    #filtramos por genero:
-    # Paso 2: Filtrar por género
-    filtered_df = merged_df1[merged_df1['genero'] == genero]
-
-     #  Encontrar el jugador que más jugó por año
-    result = filtered_df.groupby(['anio', 'id'])['playtime_forever'].sum().reset_index()
-    result = result.sort_values(by='playtime_forever', ascending=False).drop_duplicates(subset='anio')
-
-    return [3,2,1]
 
 
