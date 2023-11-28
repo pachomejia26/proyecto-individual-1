@@ -27,7 +27,7 @@ def getRecomendaciones(id_producto):
         l.append(lista[0])
     return l 
 
-def UserForGenre(genero):
+def getUserForGenre(genero):
     df1 = pd.read_parquet('datos/csv/df_user_items4.parquet')
     df2 = pd.read_csv('datos/csv/df_steam_games_25k.csv')
     # unimos los dataframe:
@@ -41,6 +41,6 @@ def UserForGenre(genero):
     result = filtered_df.groupby(['anio', 'id'])['playtime_forever'].sum().reset_index()
     result = result.sort_values(by='playtime_forever', ascending=False).drop_duplicates(subset='anio')
 
-    return result
+    return [3,2,1]
 
 

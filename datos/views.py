@@ -1,9 +1,8 @@
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework import status
-from secrets import token_hex
-
-from .helpers import getAnioPlayTimeGenre,getRecomendaciones
+  
+from .helpers import getAnioPlayTimeGenre,getRecomendaciones,getUserForGenre
 
 @api_view(['GET'])
 def PlayTimeGenre(request, genero: str):
@@ -21,9 +20,9 @@ def recomendacion_juego(request, id_producto: str):
     return JsonResponse(data,status=status.HTTP_200_OK)
 
 @api_view(['GET'])
-def PlaytimeUser(request, genero: str):
+def UserForGenre(request, genero: str):
     genero=genero.capitalize()
-    usuarios = UserForGenre(genero)
+    usuarios = getUserForGenre(genero)
     data = {'lista jugadores con mas tiempo por año':usuarios}
     return JsonResponse(data, status=status.HTTP_200_OK)
 
