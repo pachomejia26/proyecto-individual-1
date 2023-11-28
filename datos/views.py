@@ -19,3 +19,11 @@ def recomendacion_juego(request, id_producto: str):
     juegos_recomendados= getRecomendaciones(id_producto)
     data = {'cinco recomendaciones':juegos_recomendados}
     return JsonResponse(data,status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+def PlaytimeUser(request, genero: str):
+    genero=genero.capitalize()
+    usuarios = UserForGenre(genero)
+    data = {'lista jugadores con mas tiempo por año':usuarios}
+    return JsonResponse(data, status=status.HTTP_200_OK)
+
