@@ -14,6 +14,10 @@ ejemplo de retorno: {"Anio de lanzamiento con mas horas jugadas para Genero Acti
 
 ruta: https://proyecto-gx9t.onrender.com/recomendaciones/<str:id_producto>/
 
+ejemplo de petición https://proyecto-gx9t.onrender.com/recomendaciones/774277/
+
+ejemplo de retorno: {"cinco recomendaciones": [774271, 774278, 774279, 674100, 288140]}
+
 ## Bitácora procesamiento de datos
 
 El título de cada párrafo, se refiere al nombre de los archivos ipynb.  Indico qué se hace en cada uno de ellos:
