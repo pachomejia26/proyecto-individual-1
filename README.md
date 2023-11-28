@@ -1,5 +1,17 @@
 # proyecto-individual-1
 
+## Documentación API
+
+### PlayTimeGenre:
+
+ruta: https://proyecto-gx9t.onrender.com/play-time-genre/<str:genero>/
+
+ejemplo de petición: https://proyecto-gx9t.onrender.com/play-time-genre/action/
+
+ejemplo de retorno: {"Anio de lanzamiento con mas horas jugadas para Genero Action": 2012}
+
+## Bitácora procesamiento de datos
+
 El título de cada párrafo, se refiere al nombre de los archivos ipynb.  Indico qué se hace en cada uno de ellos:
 
 Preliminares
